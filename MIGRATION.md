@@ -2,55 +2,68 @@
 
 Source repository: `satnamkhowal/swiggy-wala-website`
 Target repository: `satnamkhowal/swiggy-wala-new-website`
-Theme base: `theme/preview/main-home/` (AtlasTrip static HTML assets)
-Working variant: `theme/preview/swiggy-wala-home/`
+Theme base: AtlasTrip / existing new-repo visual system
 
-## Migrated in first batch
+## Status
 
-- Production brand/contact constants from the existing website.
-- Existing homepage SEO title and description.
-- Existing homepage hero positioning and trip-planning message.
-- Rajasthan destinations: Udaipur, Jaipur, Jaisalmer, Jodhpur, Mount Abu and Pushkar.
-- Existing package set: Udaipur Heritage Escape, Royal Rajasthan Circuit, Desert & Fort Adventure and Rajasthan Honeymoon.
-- Full service catalogue grouped into Tour Operator Services, Jaipur & Rajasthan Packages, Travel & Transport Services and Specialized Tours.
-- Eight Jaipur location addresses and Google Maps links.
-- Existing four-step trip-planning flow.
-- WhatsApp and phone conversion actions.
-- TravelAgency structured data on the new homepage.
+**SOURCE CONTENT MIGRATION COMPLETE — 23 September 2026**
 
-## Migrated in second batch
+The old repository remains the historical source, but the written content and source-specific assets required for the Swiggy Wala site have now been copied into the new repository. The automatic full-content migration workflow has been removed after completion so it cannot keep re-running or overwrite later theme work.
 
-- `about.html` using the existing Swiggy Wala positioning: real-person travel planning, sensible routing, clear choices and local Rajasthan focus.
-- `contact.html` using the verified phone, WhatsApp number, support email and Jaipur office location.
-- Static contact form converted into a functional WhatsApp enquiry composer instead of showing a fake form-success state without a backend.
-- `destinations.html` with all six source destinations and suggested stay durations.
-- `packages.html` with all four existing package concepts and `Price on request` retained.
-- Shared `assets/css/pages.css` for inner-page hero, content, cards, forms and responsive layouts.
-- Cross-page links added across the new second-batch pages for About, Destinations, Packages, Services, Locations and Contact.
+From this point onward, work should happen in `satnamkhowal/swiggy-wala-new-website`. Do not restart bulk migration unless a deliberate comparison finds content that is genuinely missing.
 
-## Files
+## Complete source content now preserved in the new repo
 
-- `index.html` — first migrated homepage.
-- `about.html` — migrated About page.
-- `contact.html` — migrated Contact page with WhatsApp enquiry flow.
-- `destinations.html` — migrated Rajasthan destination index.
-- `packages.html` — migrated Rajasthan package index.
-- `services.html` — first migrated services catalogue page.
-- `locations.html` — first migrated Jaipur branch directory.
-- `assets/css/swiggy-wala.css` — Swiggy Wala visual layer on top of the existing AtlasTrip theme assets.
-- `assets/css/pages.css` — shared inner-page visual layer.
-- `assets/data/site-content.json` — centralized migrated content for future pages.
+- Central content/data files under `data/`, including blogs, locations, SEO service pages, services and destination/package data.
+- Service pages and service route files under `services/`.
+- Jaipur branch/local SEO pages under `locations/`.
+- Travel guides and articles under `blog/` and `blogs/`.
+- Story content under `stories/`.
+- Gallery content under `gallery/`.
+- Root PHP content pages from the previous website.
+- Shared PHP includes/templates required by the migrated data-driven pages.
+- Production Swiggy Wala images and brand assets under `assets/images/`.
+- Production SEO/support files such as `.htaccess`, `robots.txt`, sitemaps and web manifest where available in the source.
+- Source CSS retained where required, with the migrated PHP layer adapted to the selected new-repo theme system.
 
-## Next migration batch
+## Static-theme migration already completed
 
-1. Individual destination detail pages.
-2. Tour package detail templates/pages.
-3. High-intent Jaipur taxi/route service pages.
-4. Blog and travel-guide migration.
-5. Individual Jaipur branch pages with local SEO/schema.
-6. Copy the production Swiggy Wala logo and selected source imagery into the new theme asset tree when binary asset transfer is available.
-7. Replace temporary theme imagery with source-specific optimized images and verify alt text.
-8. Final header/footer consolidation, homepage links, internal links, sitemap, robots, canonical URLs and broken-link sweep.
+- Homepage.
+- About page.
+- Contact page and WhatsApp enquiry flow.
+- Destinations index.
+- Packages index.
+- Services catalogue.
+- Locations directory.
+- Destination detail pages for Jaipur, Udaipur, Jaisalmer, Jodhpur, Mount Abu and Pushkar.
+- Initial high-intent static service pages including Jaipur local taxi, full-day Jaipur sightseeing, Jaipur Airport taxi and Jaipur Railway Station taxi.
+- Privacy Policy and Terms & Conditions static pages.
+
+## Source snapshot
+
+A second safety copy of central written content is retained under `migration-source/data/` in the new repository. This is an archive/reference layer and should not be treated as a second production content system.
+
+## Production routing
+
+The migrated PHP site content is preserved for completeness and data-driven routes. The repository also contains enhanced static HTML pages from the new theme. `.htaccess` / `DirectoryIndex` should remain the authority for the production entry point on PHP hosting.
+
+Do not delete legacy PHP/data files until the corresponding live URL has been checked against the static replacement and redirects/canonicals have been decided.
+
+## Migration automation
+
+The temporary GitHub Actions workflow used to perform the full source migration was deleted after the successful migration commit. `tools/migrate_full_content.py` may remain only as a manual historical/recovery utility; it is not scheduled or automatic.
+
+## What remains
+
+These are **post-migration QA/theme-integration tasks**, not source-content migration:
+
+1. Decide final preferred URL for duplicate HTML/PHP equivalents and add redirects/canonicals.
+2. Finish converting any desired PHP route/service/blog pages to the enhanced static-theme presentation where useful.
+3. Consolidate header/footer so all live pages use the same production logo, navigation and CTA style.
+4. Replace any remaining temporary theme imagery with migrated Swiggy Wala imagery and verify alt text.
+5. Rebuild/verify sitemap entries against the final preferred URLs.
+6. Run a broken-link, image-path, canonical, metadata, mobile and form/WhatsApp sweep before deployment.
+7. Verify the deployed domain responds correctly for the selected production entry point and all important migrated URLs.
 
 ## Migration rule
 
