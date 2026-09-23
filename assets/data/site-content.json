@@ -1,0 +1,66 @@
+{
+  "brand": {
+    "name": "Swiggy Wala",
+    "url": "https://swiggywala.com",
+    "tagline": "A Destination For The New Millennium.",
+    "phoneDisplay": "+91 99297 97091",
+    "phoneTel": "+919929797091",
+    "whatsapp": "919929797091",
+    "email": "info@swiggywala.com",
+    "officeAddress": "Jaipur, Rajasthan, India"
+  },
+  "seo": {
+    "homeTitle": "Swiggy Wala | Rajasthan Tour Packages & Jaipur Travel Planning",
+    "homeDescription": "Plan personalised Rajasthan tours with Swiggy Wala. Visit our Jaipur branch network for itineraries, local tours, Rajasthan travel planning and trip support across the city."
+  },
+  "destinations": [
+    {"name":"Udaipur","slug":"udaipur","tag":"Lakes, palaces and romantic sunsets","days":"2–4 days"},
+    {"name":"Jaipur","slug":"jaipur","tag":"Forts, bazaars and royal heritage","days":"2–3 days"},
+    {"name":"Jaisalmer","slug":"jaisalmer","tag":"Golden fort and Thar Desert camps","days":"2–3 days"},
+    {"name":"Jodhpur","slug":"jodhpur","tag":"Blue City lanes and Mehrangarh Fort","days":"2 days"},
+    {"name":"Mount Abu","slug":"mount-abu","tag":"Rajasthan’s cool hill retreat","days":"2 days"},
+    {"name":"Pushkar","slug":"pushkar","tag":"Sacred lake, cafés and desert calm","days":"1–2 days"}
+  ],
+  "packages": [
+    {"title":"Udaipur Heritage Escape","duration":"3 Days / 2 Nights","price":"Price on request","places":"City Palace · Lake Pichola · Sajjangarh"},
+    {"title":"Royal Rajasthan Circuit","duration":"7 Days / 6 Nights","price":"Price on request","places":"Jaipur · Jodhpur · Udaipur"},
+    {"title":"Desert & Fort Adventure","duration":"5 Days / 4 Nights","price":"Price on request","places":"Jodhpur · Jaisalmer · Sam Dunes"},
+    {"title":"Rajasthan Honeymoon","duration":"6 Days / 5 Nights","price":"Price on request","places":"Udaipur · Mount Abu · Jaipur"}
+  ],
+  "serviceGroups": [
+    {
+      "slug":"tour-operator",
+      "label":"Tour Operator Services",
+      "intro":"Private, guided and experience-led tours across Jaipur and Rajasthan.",
+      "items":["Private Tours","Adventure Tours","Aerial Tours","Boat Tours","Bus Tours","Campus Tours","City Tours","Educational Tours","Excursion Operation","Group Tours","Guided Walking Tours","Helicopter Tours","Historical Tours","Multilingual Tours","Museum Tours","Safaris","Sightseeing Tours","Tour Pick-Up Service","Trolley Tours"]
+    },
+    {
+      "slug":"packages",
+      "label":"Jaipur & Rajasthan Packages",
+      "intro":"Customisable city breaks, circuits and holiday packages for different travel styles.",
+      "items":["Rajasthan Tour Packages","Jaipur Tour Packages","Jaipur Sightseeing Tours","Rajasthan Sightseeing Tours","Golden Triangle Tour","Delhi Agra Jaipur Tour","Jaipur Agra Tour","Rajasthan Heritage Tours","Rajasthan Cultural Tours","Family Tour Packages","Couple Tour Packages","Honeymoon Tour Packages","Group Tour Packages","Customized Tour Packages","Weekend Tour Packages","One Day Jaipur Tour","Same Day Rajasthan Tours","Outstation Tours","Local City Tours","Fort & Palace Tours"]
+    },
+    {
+      "slug":"travel-services",
+      "label":"Travel & Transport Services",
+      "intro":"Transfers, vehicles, guides and practical itinerary support for Rajasthan travel.",
+      "items":["Airport Transfer Service","Jaipur Airport Taxi","Jaipur Airport Pickup","Railway Station Transfer","Hotel Pickup & Drop","Outstation Taxi Service","Jaipur to Ajmer Taxi","Jaipur to Pushkar Taxi","Jaipur to Ranthambore Taxi","Tempo Traveller Tour","Car Rental with Driver","Tour Guide Service","Custom Travel Itinerary","Self-Drive Car Rental"]
+    },
+    {
+      "slug":"specialized",
+      "label":"Specialized Tours",
+      "intro":"Purpose-built travel programmes for companies, institutions, families and special occasions.",
+      "items":["Corporate Tour Packages","School & College Tours","Group Excursion Tours","Honeymoon Travel Packages","Family Vacation Packages","Weekend Getaway Packages","Customized Rajasthan Trips"]
+    }
+  ],
+  "locations": [
+    {"slug":"jhotwara-kanta-chauraha","name":"Swiggy Wala – Jhotwara, Kanta Chauraha","area":"Kanta Chauraha / Sindhi Colony / Jhotwara","address":"234 B 5, Sindhi Colony, Jhotwara, Jaipur Nagar Nigam Area, Jaipur, Rajasthan 302012","maps":"https://maps.app.goo.gl/zUFEh6WPLppes2PJ6"},
+    {"slug":"pani-pech-vidyadhar-nagar","name":"Swiggy Wala – Pani Pech, Vidyadhar Nagar","area":"Pani Pech / Vidyadhar Nagar","address":"RPA Rd, Pani Pech, Vidyadhar Nagar, Jaipur, Rajasthan 302016","maps":"https://maps.app.goo.gl/EkTGMvDypgfya4XS8"},
+    {"slug":"hasanpura","name":"Swiggy Wala – Hasanpura, Jaipur","area":"Hasanpura","address":"Bheru Gujar Ki Thadi, 57, Hasanpura A, Hasanpura, Jaipur, Rajasthan 302006","maps":"https://maps.app.goo.gl/2ECxvM3MjnpC6MtA8"},
+    {"slug":"pratap-nagar-sanganer","name":"Swiggy Wala – Pratap Nagar, Sanganer","area":"Pratap Nagar / Sanganer","address":"First Floor, 32/330, Sanganer, Sector 3, Pratap Nagar, Jaipur, Rajasthan 302033","maps":"https://maps.app.goo.gl/fUMB6ha8tJWy366u7"},
+    {"slug":"bambala-shatabdi-nagar","name":"Swiggy Wala – Bambala, Shatabdi Nagar","area":"Bambala / Shatabdi Nagar","address":"QRPC+8G7, Mahaveer Colony, Shatabdi Nagar, Bambala, Jaipur, Rajasthan 302033","maps":"https://maps.app.goo.gl/TkqkNQ8LTHxMe4Rd7"},
+    {"slug":"harmada-sikar-road","name":"Swiggy Wala – Harmada, Sikar Road","area":"Harmada / Sikar Road","address":"Sikar Rd, Suncity, Harmada, Jaipur, Rajasthan 302048","maps":"https://maps.app.goo.gl/paytUkeHDg4dkCPi6"},
+    {"slug":"agrawal-farm-mansarovar","name":"Swiggy Wala – Agrawal Farm, Mansarovar","area":"Agrawal Farm / Mansarovar","address":"CBC 05, Vikramaditya Marg, Mansarovar Sector 11, Mansarovar, Jaipur, Rajasthan 302020","maps":"https://maps.app.goo.gl/4QyxcxNaK8QMUzWF8"},
+    {"slug":"gopalpura-bypass","name":"Swiggy Wala – Gopalpura Bypass","area":"Gopalpura Bypass / Triveni Nagar","address":"A-41 colony, Gopalpura Bypass Rd, Ashok Vihar Extension, Vishveshvariya Nagar, Triveni Nagar, Jaipur, Rajasthan 302018","maps":"https://maps.app.goo.gl/tBo8JHFPTG7aLEcf9"}
+  ]
+}
