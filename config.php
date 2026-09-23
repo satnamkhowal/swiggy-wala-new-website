@@ -1,19 +1,36 @@
 <?php
 declare(strict_types=1);
 
-const SITE_NAME = 'Swiggy Wala';
-const SITE_URL = 'https://swiggywala.com';
-const SITE_TAGLINE = 'A Destination For The New Millennium.';
-const PHONE_DISPLAY = '+91 99297 97091';
-const PHONE_TEL = '+919929797091';
-const WHATSAPP_NUMBER = '919929797091';
-const SUPPORT_EMAIL = 'info@swiggywala.com';
-const OFFICE_ADDRESS = 'Jaipur, Rajasthan, India';
-const GA_MEASUREMENT_ID = 'G-4R66GSPDXP';
-const GTM_CONTAINER_ID = 'GTM-5WWMDQMZ';
+$runtimeConfig = [];
+$runtimeConfigFile = __DIR__ . '/app/config.php';
+if (is_file($runtimeConfigFile)) {
+    $loadedRuntimeConfig = require $runtimeConfigFile;
+    if (is_array($loadedRuntimeConfig)) {
+        $runtimeConfig = $loadedRuntimeConfig;
+    }
+}
+$runtimeBusiness = is_array($runtimeConfig['business'] ?? null) ? $runtimeConfig['business'] : [];
+
+$siteName = trim((string)($runtimeBusiness['name'] ?? 'Swiggy Wala')) ?: 'Swiggy Wala';
+$siteUrl = rtrim(trim((string)($runtimeConfig['site_url'] ?? 'https://swiggywala.com')), '/');
+$phoneDisplay = trim((string)($runtimeBusiness['phone'] ?? '+91 99297 97091')) ?: '+91 99297 97091';
+$phoneDigits = preg_replace('/\D+/', '', $phoneDisplay) ?: '919929797091';
+$supportEmail = trim((string)($runtimeBusiness['email'] ?? 'info@swiggywala.com')) ?: 'info@swiggywala.com';
+$officeAddress = trim((string)($runtimeBusiness['address'] ?? 'Jaipur, Rajasthan, India')) ?: 'Jaipur, Rajasthan, India';
+
+define('SITE_NAME', $siteName);
+define('SITE_URL', $siteUrl ?: 'https://swiggywala.com');
+define('SITE_TAGLINE', 'A Destination For The New Millennium.');
+define('PHONE_DISPLAY', $phoneDisplay);
+define('PHONE_TEL', '+' . $phoneDigits);
+define('WHATSAPP_NUMBER', $phoneDigits);
+define('SUPPORT_EMAIL', $supportEmail);
+define('OFFICE_ADDRESS', $officeAddress);
+define('GA_MEASUREMENT_ID', 'G-4R66GSPDXP');
+define('GTM_CONTAINER_ID', 'GTM-5WWMDQMZ');
 
 function e(string $value): string { return htmlspecialchars($value, ENT_QUOTES, 'UTF-8'); }
-function wa_link(string $message = 'Hello Swiggy Wala, I want help planning my Rajasthan trip.'): string {
+function wa_link(string $message = 'Hello Swiggy Wala, I want to book a taxi.'): string {
     return 'https://wa.me/' . WHATSAPP_NUMBER . '?text=' . rawurlencode($message);
 }
 function wa_icon(): string {

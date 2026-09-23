@@ -1,6 +1,19 @@
 Options -Indexes
 DirectoryIndex index.php index.html
 ErrorDocument 404 /404.php
+
+# Never expose application configuration or reusable PHP partials directly.
+RewriteEngine On
+RewriteRule ^app/ - [F,L]
+RewriteRule ^partials/ - [F,L]
+RewriteRule ^book-taxi/?$ booking.php [L,QSA]
+RewriteRule ^install/?$ install/index.php [L,QSA]
+RewriteRule ^admin/?$ admin/index.php [L,QSA]
+
+<FilesMatch "(^\.|app/config\.php$|\.sql$|\.log$)">
+  Require all denied
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
@@ -20,6 +33,7 @@ RewriteRule ^blogs/3-day-solo-udaipur-trip-swiggywala/?$ blogs/udaipur-solo-trip
 RewriteRule ^blogs/?$ blogs/index.php [L,QSA]
 RewriteRule ^blogs/([a-z0-9-]+)/?$ blogs/post.php?slug=$1 [L,QSA]
 </IfModule>
+
 <IfModule mod_headers.c>
 Header always set X-Content-Type-Options "nosniff"
 Header always set X-Frame-Options "SAMEORIGIN"
