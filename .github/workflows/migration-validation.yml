@@ -1,0 +1,52 @@
+name: Validate Full Content Migration
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/migration-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate PHP syntax
+        run: |
+          find . -name '*.php' -not -path './theme/*' -not -path './main-home/*' -print0 | xargs -0 -n1 php -l
+      - name: Validate migrated content inventory
+        run: |
+          test -f assets/images/swiggywala-logo.png
+          test -s assets/images/swiggywala-logo.png
+          test -f data/blogs.php
+          test -f data/services.php
+          test -f data/seo-service-pages.php
+          test -f data/locations.php
+          test -f gallery/index.php
+          test -f stories/udaipur-solo-trip.php
+          test -f privacy-policy.php
+          test -f terms.php
+          test -f sitemap.xml
+          test -f robots.txt
+          service_count=$(find services -maxdepth 1 -name '*.php' | wc -l)
+          blog_count=$(find blog -maxdepth 1 -name '*.php' | wc -l)
+          location_count=$(find locations -maxdepth 1 -name '*.php' | wc -l)
+          echo "services=$service_count blogs=$blog_count locations=$location_count"
+          test "$service_count" -ge 50
+          test "$blog_count" -ge 15
+          test "$location_count" -eq 8
+          php -r '$x=require "data/blogs.php"; if(count($x)<15){fwrite(STDERR,"Blog data incomplete\n"); exit(1);} echo "blog-data=".count($x).PHP_EOL;'
+          php -r '$x=require "data/locations.php"; if(count($x)!==8){fwrite(STDERR,"Location data incomplete\n"); exit(1);} echo "locations-data=".count($x).PHP_EOL;'
+      - name: Validate AtlasTrip branding integration
+        run: |
+          grep -q '#0067EE' assets/css/swiggy-wala.css
+          grep -q "swiggywala-logo.png" assets/css/swiggy-wala.css
+          if grep -q 'raw.githubusercontent.com/satnamkhowal/swiggy-wala-website/main/assets/images/swiggywala-logo.png' assets/css/swiggy-wala.css; then
+            echo 'Remote logo dependency still present' >&2
+            exit 1
+          fi
+          grep -q 'DirectoryIndex index.php index.html' .htaccess
