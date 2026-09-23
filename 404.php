@@ -1,0 +1,2 @@
+<?php http_response_code(404);$pageTitle='Page Not Found | Swiggy Wala';$pageDescription='The requested Swiggy Wala page could not be found.';include 'includes/header.php';?><main><section class="page-hero"><div class="container"><span class="eyebrow">404 error</span><h1>This route isn’t on the map.</h1><p>The page may have moved. Return home or browse our Rajasthan travel guides.</p><a class="btn" href="/">Go to Home</a></div></section></main><?php include 'includes/footer.php';?>
+

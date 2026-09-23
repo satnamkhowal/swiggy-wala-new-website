@@ -1,0 +1,11 @@
+<?php
+require_once __DIR__.'/config.php';
+$locations=require __DIR__.'/data/locations.php';
+$pageTitle='Swiggy Wala Jaipur Branches | Tour & Travel Locations';
+$pageDescription='Find Swiggy Wala tour and travel branches across Jaipur with verified addresses, Google Maps directions, Rajasthan tour planning and local travel support.';
+$canonical=SITE_URL.'/locations.php';
+include __DIR__.'/includes/header.php';
+?>
+<main><section class="page-hero page-hero-illustrated locations-hero"><div class="container page-hero-layout"><div class="page-hero-copy"><div class="breadcrumb"><a href="/">Home</a> / Locations</div><span class="eyebrow">Jaipur branch network</span><h1>Find a Swiggy Wala branch in Jaipur.</h1><p>Choose the Jaipur branch closest to you. Each location page includes its full address, Google Maps directions and local travel-planning information.</p><div class="hero-actions"><a class="btn" href="#jaipur-branches">View Jaipur Branches</a><a class="btn btn-outline" href="/contact.php">Plan a Visit</a></div></div><div class="page-hero-art local-support-art"><img src="/assets/images/graphics/jaipur-local-support.svg" alt="Jaipur local travel support illustration with cab, city landmark and location pin" width="820" height="580"></div></div></section>
+<section class="section" id="jaipur-branches"><div class="container"><div class="locations-grid"><?php foreach($locations as $loc):?><article class="location-card"><div class="map-frame"><iframe title="Map for <?= e($loc['short_name']) ?>" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=<?= rawurlencode($loc['address']) ?>&output=embed"></iframe></div><div class="location-card-body"><span class="eyebrow">Jaipur branch</span><h3><?= e($loc['short_name']) ?></h3><p class="location-address"><?= e($loc['address']) ?></p><p><?= e($loc['description']) ?></p><div class="location-actions"><a class="btn btn-small" href="/locations/<?= e($loc['slug']) ?>.php">View branch profile</a><a class="btn btn-small btn-outline" href="<?= e($loc['maps_url']) ?>" target="_blank" rel="noopener">Google Maps</a></div></div></article><?php endforeach;?></div></div></section></main>
+<?php include __DIR__.'/includes/footer.php'; ?>

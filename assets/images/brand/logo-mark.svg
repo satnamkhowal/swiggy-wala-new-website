@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Swiggy Wala bird mark</title><desc id="desc">Geometric green hummingbird symbol</desc>
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#087b38"/><stop offset="1" stop-color="#83dc12"/></linearGradient></defs>
+  <g fill="url(#g)">
+    <path d="M50 151h48v-48z"/><path d="M108 104h67l66 67H108z"/>
+    <path d="M180 171 310 42v129z"/><path d="m324 42 139 9-139 130z"/>
+    <path d="m389 126 88-58-65 73z"/><path d="M111 188h196L245 367z"/>
+    <path d="m316 190-4 281-95-55z"/>
+  </g>
+</svg>

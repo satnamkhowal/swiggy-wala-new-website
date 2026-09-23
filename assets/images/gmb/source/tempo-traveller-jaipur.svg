@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#eef8f2"/><stop offset="1" stop-color="#cfe9d8"/></linearGradient>
+  <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#075d35"/><stop offset="1" stop-color="#76bd28"/></linearGradient>
+  <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#103d25"/><stop offset="1" stop-color="#061f14"/></linearGradient>
+  <filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-opacity=".18"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<path d="M1430 0h490v330c-145-20-292-115-490-330z" fill="#07552f"/>
+<path d="M1550 0h370v245c-105-20-220-95-370-245z" fill="#5eb32e"/>
+
+<!-- Brand -->
+<g transform="translate(78 65)">
+ <polygon points="0,46 46,46 46,0" fill="#076b3a"/>
+ <polygon points="60,0 130,0 192,70 60,70" fill="#087a42"/>
+ <polygon points="200,0 335,0 200,138" fill="#75bd29"/>
+ <polygon points="60,86 200,86 150,232" fill="#158540"/>
+ <polygon points="200,86 200,258 150,235" fill="#56aa2f"/>
+</g>
+<text x="455" y="145" font-family="Arial,sans-serif" font-size="82" font-weight="800" fill="#101312">Swiggy Wala</text>
+<text x="462" y="205" font-family="Arial,sans-serif" font-size="29" letter-spacing="3" fill="#176b40">A Destination For The New Millennium.</text>
+
+<!-- Headline -->
+<text x="82" y="365" font-family="Arial,sans-serif" font-size="94" font-weight="850" fill="#101312">Tempo Traveller</text>
+<text x="82" y="460" font-family="Arial,sans-serif" font-size="94" font-weight="850" fill="url(#green)">Group Travel from Jaipur</text>
+<text x="88" y="520" font-family="Arial,sans-serif" font-size="38" font-weight="650" fill="#223129">Family Trips • Corporate Travel • Rajasthan Tours</text>
+
+<!-- Heritage illustration -->
+<g transform="translate(1250 150)" opacity=".95">
+  <rect x="0" y="210" width="520" height="235" rx="8" fill="#da8a57"/>
+  <path d="M38 210v-105h75v105M160 210V72h85v138M300 210V112h78v98M422 210V55h72v155" fill="#e39a68"/>
+  <g fill="#fff" opacity=".65">
+    <circle cx="75" cy="165" r="16"/><circle cx="202" cy="127" r="17"/><circle cx="339" cy="168" r="16"/><circle cx="458" cy="120" r="17"/>
+  </g>
+  <path d="M0 210h520v28H0z" fill="#bd6c3d"/>
+  <text x="260" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#16452d">JAIPUR • RAJASTHAN</text>
+</g>
+
+<!-- Traveller vehicle -->
+<g transform="translate(610 515)" filter="url(#s)">
+  <path d="M85 90 Q120 20 230 20 H560 Q665 25 710 118 L760 285 H40Z" fill="#fbfdfc" stroke="#c8d3cc" stroke-width="6"/>
+  <rect x="165" y="58" width="145" height="128" rx="18" fill="#d6e6de"/>
+  <rect x="330" y="58" width="145" height="128" rx="18" fill="#d6e6de"/>
+  <rect x="495" y="58" width="125" height="128" rx="18" fill="#d6e6de"/>
+  <path d="M35 270h750q34 0 34 32v120H0V310q0-40 35-40z" fill="#ffffff" stroke="#c7d2cb" stroke-width="5"/>
+  <rect x="295" y="300" width="230" height="58" rx="18" fill="#0b7040"/>
+  <text x="410" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="800" fill="#fff">SWIGGY WALA</text>
+  <circle cx="165" cy="430" r="68" fill="#202a24" stroke="#fff" stroke-width="15"/>
+  <circle cx="650" cy="430" r="68" fill="#202a24" stroke="#fff" stroke-width="15"/>
+  <circle cx="165" cy="430" r="29" fill="#adb7b0"/>
+  <circle cx="650" cy="430" r="29" fill="#adb7b0"/>
+  <path d="M665 180h95l45 86H650z" fill="#edf3ef"/>
+</g>
+
+<!-- Feature pills -->
+<g font-family="Arial,sans-serif">
+  <g transform="translate(88 595)">
+    <rect width="360" height="82" rx="41" fill="#fff" stroke="#cfe0d4" stroke-width="3"/>
+    <circle cx="46" cy="41" r="25" fill="#0b7340"/><text x="87" y="51" font-size="29" font-weight="700" fill="#173524">Family &amp; Group Trips</text>
+  </g>
+  <g transform="translate(88 700)">
+    <rect width="360" height="82" rx="41" fill="#fff" stroke="#cfe0d4" stroke-width="3"/>
+    <circle cx="46" cy="41" r="25" fill="#0b7340"/><text x="87" y="51" font-size="29" font-weight="700" fill="#173524">Custom Route Planning</text>
+  </g>
+  <g transform="translate(88 805)">
+    <rect width="360" height="82" rx="41" fill="#fff" stroke="#cfe0d4" stroke-width="3"/>
+    <circle cx="46" cy="41" r="25" fill="#0b7340"/><text x="87" y="51" font-size="29" font-weight="700" fill="#173524">Local &amp; Outstation</text>
+  </g>
+</g>
+
+<!-- bottom -->
+<path d="M0 915 C600 855 1210 925 1920 840V1080H0Z" fill="url(#dark)"/>
+<text x="82" y="990" font-family="Arial,sans-serif" font-size="34" font-weight="800" fill="#fff">TRAVEL TOGETHER • PLAN CLEARLY • EXPLORE RAJASTHAN</text>
+<rect x="1450" y="936" width="360" height="92" rx="46" fill="#69b72a"/>
+<text x="1630" y="994" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#fff">LEARN MORE</text>
+<text x="85" y="1045" font-family="Arial,sans-serif" font-size="28" letter-spacing="3" fill="#d5eadc">GROUP TRAVEL FROM JAIPUR</text>
+<text x="1470" y="1052" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#fff">swiggywala.com</text>
+</svg>

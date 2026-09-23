@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" role="img" aria-labelledby="t d">
+<title id="t">Rajasthan journey illustration</title><desc id="d">Fort, road, taxi, dunes and travel route illustration.</desc>
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6f8ef"/><stop offset="1" stop-color="#e6f2df"/></linearGradient>
+ <linearGradient id="hill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7aa86e"/><stop offset="1" stop-color="#315d38"/></linearGradient>
+ <linearGradient id="sand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6d79a"/><stop offset="1" stop-color="#d9a25d"/></linearGradient>
+ <linearGradient id="fort" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f1c985"/><stop offset="1" stop-color="#c88b48"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#173a20" flood-opacity=".15"/></filter>
+</defs>
+<path d="M78 495C42 377 78 202 236 122c133-67 265-24 348 35 76 55 177 71 221 185 38 97 17 207-71 252-104 53-228 2-342 16-112 13-276 40-314-115Z" fill="url(#sky)"/>
+<circle cx="670" cy="127" r="68" fill="#fff3cf" opacity=".9"/>
+<path d="M123 341c106-91 177-137 275-105 74 24 107 87 171 79 94-11 140-94 228-29v174H100Z" fill="#b8d3a8"/>
+<path d="M99 389c119-97 222-101 300-64 86 41 128 77 229 32 65-29 119-19 169 15v101H95Z" fill="url(#hill)"/>
+<path d="M98 434c123-37 224-24 306 17 87 44 166 55 285 14 43-15 77-12 109-1v116H82Z" fill="#204a2c"/>
+<path d="M205 295h342v102H205Z" fill="url(#fort)" filter="url(#shadow)"/>
+<path d="M232 266h70v131h-70Zm112-47h66v178h-66Zm112 30h65v148h-65Z" fill="#e7b66f"/>
+<path d="M225 270 267 236l42 34Zm112-47 40-38 40 38Zm112 30 39-34 39 34Z" fill="#cf914b"/>
+<g fill="#6a4626" opacity=".75"><path d="M247 308h18v36h-18Zm38 0h18v36h-18Zm76-39h18v38h-18Zm29 0h18v38h-18Zm83 26h18v39h-18Z"/></g>
+<path d="M381 592c-2-83 49-135 109-170 51-29 85-64 92-112" fill="none" stroke="#f9f5e9" stroke-width="46" stroke-linecap="round"/>
+<path d="M381 592c-2-83 49-135 109-170 51-29 85-64 92-112" fill="none" stroke="#33443b" stroke-width="30" stroke-linecap="round"/>
+<path d="M390 569c5-65 45-104 102-137 47-27 77-58 84-106" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="14 17" stroke-linecap="round"/>
+<g transform="translate(420 455)" filter="url(#shadow)">
+ <path d="M0 42h121l-12 58H17Z" fill="#fff"/>
+ <path d="M21 12h71c17 0 29 14 34 30H5c3-14 7-30 16-30Z" fill="#f7f7f4"/>
+ <path d="M31 19h48c11 0 20 9 24 22H17c3-11 6-22 14-22Z" fill="#b8d4ce"/>
+ <rect x="8" y="36" width="109" height="42" rx="11" fill="#f7f7f4"/>
+ <circle cx="30" cy="83" r="13" fill="#25352d"/><circle cx="94" cy="83" r="13" fill="#25352d"/>
+ <rect x="50" y="1" width="29" height="11" rx="3" fill="#efb73d"/>
+</g>
+<g transform="translate(676 398)">
+ <path d="M30 6c33 0 60 27 60 60 0 45-60 108-60 108S-30 111-30 66C-30 33-3 6 30 6Z" fill="#2d6a3c"/>
+ <circle cx="30" cy="66" r="23" fill="#f8f5e8"/>
+</g>
+<path d="M689 497c-68 4-106 30-142 69" fill="none" stroke="#d49b43" stroke-width="5" stroke-dasharray="9 12" stroke-linecap="round"/>
+<path d="M90 510c48-43 101-57 158-39-44 8-87 31-125 70Z" fill="url(#sand)" opacity=".96"/>
+<g fill="#6d4b29"><path d="M146 484c17 0 28 9 28 19h-50c0-10 8-19 22-19Zm-19 17h8v21h-8Zm36 0h8v21h-8Z"/></g>
+<g fill="#2f6840" opacity=".95"><path d="M85 518c42-39 76-48 95-32-29 4-55 19-84 47Z"/><path d="M775 470c37-35 68-41 91-26-31 5-58 19-84 43Z"/></g>
+</svg>

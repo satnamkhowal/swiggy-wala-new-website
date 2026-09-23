@@ -1,0 +1,11 @@
+<?php
+require_once __DIR__.'/../config.php';
+$locations=require __DIR__.'/../data/locations.php';
+$location=$locations['harmada-sikar-road'];
+$pageTitle='Swiggy Wala Harmada Sikar Road Jaipur | Tours & Travel';
+$pageDescription='Visit Swiggy Wala at Harmada, Sikar Road, Jaipur for Rajasthan tours, Jaipur sightseeing, outstation travel and personalised trip planning.';
+$canonical=SITE_URL.'/locations/harmada-sikar-road.php';
+$pageSchema=['@context'=>'https://schema.org','@type'=>'TravelAgency','name'=>$location['name'],'url'=>$canonical,'telephone'=>PHONE_DISPLAY,'email'=>SUPPORT_EMAIL,'hasMap'=>$location['maps_url'],'address'=>['@type'=>'PostalAddress','streetAddress'=>$location['address'],'addressLocality'=>$location['city'],'addressRegion'=>$location['state'],'postalCode'=>$location['postal_code'],'addressCountry'=>'IN'],'parentOrganization'=>['@type'=>'Organization','name'=>SITE_NAME,'url'=>SITE_URL],'areaServed'=>['Jaipur','Rajasthan']];
+include __DIR__.'/../includes/header.php';
+include __DIR__.'/../includes/location-detail.php';
+include __DIR__.'/../includes/footer.php';

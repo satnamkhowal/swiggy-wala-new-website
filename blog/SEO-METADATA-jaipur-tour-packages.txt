@@ -1,0 +1,13 @@
+SEO Title: Jaipur Tour Packages | Swiggywala Tours & Travels
+Meta Description: Explore Jaipur tour packages with Swiggywala Tours & Travels. Plan Jaipur sightseeing trips covering Amber Fort, Hawa Mahal, City Palace, Jal Mahal and Nahargarh Fort.
+Focus Keyword: Jaipur Tour Packages
+Secondary Keywords: Jaipur sightseeing tour, tours and travels in Jaipur, Jaipur travel agency, Rajasthan tour packages
+Suggested Slug: jaipur-tour-packages.php
+Canonical URL: https://swiggywala.com/blog/jaipur-tour-packages.php
+Image Filename: jaipur-tour-packages-swiggywala-tours-travels.png
+Image Path: /blog/assets/images/jaipur-tour-packages-swiggywala-tours-travels.png
+Image URL: https://swiggywala.com/blog/assets/images/jaipur-tour-packages-swiggywala-tours-travels.png
+Image Alt: Jaipur Tour Packages featuring Amber Fort, Hawa Mahal, City Palace, Jal Mahal and Nahargarh Fort
+Image Caption: Explore Jaipur's royal heritage with Swiggywala Tours & Travels.
+
+Note: Upload the generated PNG to the image path above before publishing the blog live.
