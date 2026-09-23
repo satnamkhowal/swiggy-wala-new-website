@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/migration-validation.yml'
+      - 'data/site-data.php'
   workflow_dispatch:
 
 permissions:
@@ -41,6 +42,9 @@ jobs:
           test "$location_count" -eq 8
           php -r '$x=require "data/blogs.php"; if(count($x)<15){fwrite(STDERR,"Blog data incomplete\n"); exit(1);} echo "blog-data=".count($x).PHP_EOL;'
           php -r '$x=require "data/locations.php"; if(count($x)!==8){fwrite(STDERR,"Location data incomplete\n"); exit(1);} echo "locations-data=".count($x).PHP_EOL;'
+      - name: Validate destination and package images
+        run: |
+          php -r '$x=require "data/site-data.php"; foreach(["destinations","packages"] as $group){foreach($x[$group] as $item){$p=$item["image"]; if(!is_file($p)){fwrite(STDERR,"Missing image: $p\n"); exit(1);} echo "$group: $p\n";}}'
       - name: Validate AtlasTrip branding integration
         run: |
           grep -q '#0067EE' assets/css/swiggy-wala.css
