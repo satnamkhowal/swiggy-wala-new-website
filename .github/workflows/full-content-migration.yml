@@ -28,14 +28,18 @@ jobs:
       - name: Migrate complete source content and assets
         run: python tools/migrate_full_content.py
 
-      - name: Commit migrated content
+      - name: Commit migrated content without overwriting parallel work
         run: |
           git config user.name "Swiggy Wala Migration Bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
             echo "No migration changes to commit."
-          else
-            git commit -m "Migrate complete Swiggy Wala source content"
-            git push origin main
+            exit 0
           fi
+          git commit -m "Migrate complete Swiggy Wala source content"
+          git fetch origin main
+          # Rebase onto the newest main. If a parallel worker touched the same file,
+          # keep the already-published main version and apply all non-conflicting migration files.
+          git rebase -X ours origin/main
+          git push origin main
