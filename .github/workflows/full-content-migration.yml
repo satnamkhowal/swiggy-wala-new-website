@@ -1,0 +1,41 @@
+name: Full Swiggy Wala Content Migration
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/migrate_full_content.py'
+      - '.github/workflows/full-content-migration.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target theme repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Migrate complete source content and assets
+        run: python tools/migrate_full_content.py
+
+      - name: Commit migrated content
+        run: |
+          git config user.name "Swiggy Wala Migration Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No migration changes to commit."
+          else
+            git commit -m "Migrate complete Swiggy Wala source content"
+            git push origin main
+          fi
